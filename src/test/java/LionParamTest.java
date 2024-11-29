@@ -45,18 +45,18 @@ public class LionParamTest {
     public void checkLionGetKittens() throws Exception {
         Feline felineStub = new Feline();
         Lion lionStub = new Lion(sex, felineStub);
-        assertEquals(kittens, lionStub.getKittens());
+        assertEquals("Количество котят льва не соответствует ожидаемому", kittens, lionStub.getKittens());
     }
 
     @Test
     public void checkLionGetFood() throws Exception {
         Feline felineStub = new Feline();
         Lion lionSpy = new Lion(sex, felineStub);
-        assertEquals(food, lionSpy.getFood());
+        assertEquals("Список еды для льва не соответствует ожидаемому", food, lionSpy.getFood());
     }
 
     @Test
     public void checkLionGetHasMane() throws Exception {
-        assertEquals(hasMane, lion.doesHaveMane());
+        assertEquals("Наличие гривы не соответствует полу", hasMane, lion.doesHaveMane());
     }
 }
